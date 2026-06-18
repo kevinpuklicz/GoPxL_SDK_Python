@@ -1,0 +1,37 @@
+[project]
+name = "gopxl-sdk"
+version = "0.2.0"
+description = "Lightweight Python SDK for GoPxL / Gocator sensors"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Kevin Puklicz" }]
+keywords = ["gocator", "gopxl", "lmi", "3d", "sensor", "machine-vision"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = ["msgpack>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/kevinpuklicz/GoPxL_SDK_Python"
+Repository = "https://github.com/kevinpuklicz/GoPxL_SDK_Python"
+Issues = "https://github.com/kevinpuklicz/GoPxL_SDK_Python/issues"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gopxl*"]
+
+[tool.setuptools.package-data]
+gopxl = ["py.typed"]
