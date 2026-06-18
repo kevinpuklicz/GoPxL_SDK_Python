@@ -22,6 +22,16 @@ class GoDataSet:
     def gdp_msg_at(self, index: int):
         return self._msgs[index]
 
+    # Make GoDataSet behave like a sequence/iterable of messages
+    def __iter__(self):
+        return iter(self._msgs)
+
+    def __len__(self) -> int:
+        return len(self._msgs)
+
+    def __getitem__(self, index):
+        return self._msgs[index]
+
     def set_sender(self, sender) -> None:
         self._sender = sender
 
